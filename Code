@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Azure CI/CD Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f6f9;
+            margin-top: 80px;
+        }
+        .card {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #0078D4;
+        }
+        button {
+            background-color: #0078D4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005a9e;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🚀 Azure CI/CD Working!</h1>
+    <p>This website is deployed automatically from GitHub.</p>
+    <p id="time"></p>
+    <button onclick="updateText()">Click Me</button>
+    <p id="message"></p>
+</div>
+
+<script>
+    document.getElementById("time").innerHTML =
+        "Page loaded at: " + new Date().toLocaleString();
+
+    function updateText() {
+        document.getElementById("message").innerHTML =
+            "🎉 CI/CD is working perfectly!";
+    }
+</script>
+
+</body>
+</html>
